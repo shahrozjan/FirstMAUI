@@ -36,8 +36,10 @@ public partial class MainPage : ContentPage
         {
             try
             {
-                if (PhoneDialer.Default.IsSupported)
-                    PhoneDialer.Default.Open(translatedNumber);
+                if (PhoneDialer.IsSupported)
+                    PhoneDialer.Open(translatedNumber);
+                PhoneDialer.Open(translatedNumber);
+                
             }
             catch (ArgumentNullException)
             {
